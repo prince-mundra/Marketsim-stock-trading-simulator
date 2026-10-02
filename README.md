@@ -2,6 +2,10 @@
 
 MarketSim is a full-stack **paper-trading** app for practising with Indian-equity scenarios. Every account starts with **₹100,000 of virtual INR**. The app uses controlled mock prices, persists simulated accounts and trades in MongoDB, and never submits real brokerage orders or handles real money. All market prices are explicitly simulated.
 
+## 🚀 Live Demo
+
+[Open MarketSim](https://marketsim-stock-trading-simulator.onrender.com)
+
 ## Features
 
 - Secure user registration and JWT-based authentication
