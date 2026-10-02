@@ -1,8 +1,27 @@
 # MarketSim — Stock Trading Simulator
 
-MarketSim is a full-stack **paper-trading** app for practising with Indian-equity scenarios. Every account starts with **₹100,000 of virtual INR**. The app uses controlled mock prices, persists simulated accounts and trades in MongoDB, and **never submits real brokerage orders, handles real money, or represents simulated prices as live market quotes**.
+MarketSim is a full-stack **paper-trading** app for practising with Indian-equity scenarios. Every account starts with **₹100,000 of virtual INR**. The app uses controlled mock prices, persists simulated accounts and trades in MongoDB, and never submits real brokerage orders or handles real money. All market prices are explicitly simulated.
+
+## Features
+
+- Secure user registration and JWT-based authentication
+- ₹100,000 virtual starting balance
+- Indian-equity paper trading with simulated prices
+- Server-side buy/sell validation
+- Atomic MongoDB transactions for trades
+- Portfolio tracking with average cost basis
+- Unrealized P&L calculation
+- Real-time simulated price updates using Socket.IO
+- Stock search, details, and simulated price charts
+- User-specific watchlist
+- Persistent transaction history
+- Responsive React dashboard
+- RESTful Express APIs
+- MongoDB/Mongoose persistence
 
 ## Stack and architecture
+
+The application follows a MERN-style full-stack JavaScript architecture.
 
 The client uses JavaScript, React, Vite, Tailwind CSS, React Router, Axios, Recharts, and Socket.IO Client. The server uses JavaScript, Node.js, Express, Socket.IO, JWT, bcryptjs, and Mongoose. Express serves the REST API and React app on the same origin; Socket.IO shares that HTTP server. The included stock universe uses Indian-market symbols with invented scenario prices clearly labeled as simulated.
 
@@ -67,7 +86,7 @@ pnpm start
 - `.gitignore` and `.dockerignore` exclude `.env`, dependencies, generated build output, and other local artifacts.
 - `Dockerfile` builds the React assets and runs the Node/Express server as an unprivileged user.
 - `docker-compose.yml` defines a loopback-only local app and MongoDB replica set; it uses `JWT_SECRET` from your local `.env` and a Compose-internal MongoDB URI by default.
-- `public/manus-routes.json` and `public/market-sim-logo.svg` are the website route manifest and brand mark.
+- - `public/market-sim-logo.svg` contains the application brand mark.
 
 ## Performance behavior
 
